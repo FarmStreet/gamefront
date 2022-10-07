@@ -1,0 +1,15 @@
+@import '../../../assets/styles/styles.scss';
+
+
+.inventory {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.mainPage_inventory {
+
+  .name {
+    margin-left: $windowLeftRightPadding;
+  }
+}

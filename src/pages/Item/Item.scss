@@ -1,0 +1,59 @@
+@import '../../assets/styles/styles.scss';
+
+.itemPage {
+  background: $playerInfoWindowColor;
+  width: 100vw;
+  height: 100vh;
+
+  .link {
+    font-size: $mediumTextSize;
+    text-decoration: none;
+    text-underline: none;
+    cursor: pointer;
+    border: 2vw $playerInfoFontColor solid;
+    color: $playerInfoFontColor;
+  }
+
+  .link:hover {
+    border: 2vw $playerInfoFontColorActive solid;
+    color: $playerInfoFontColorActive;
+  }
+
+  .title {
+    font-size: $mediumTextSize;
+    text-align: left;
+    margin: $mediumTextTopMargin $windowLeftRightPadding 0 $windowLeftRightPadding;
+  }
+
+  .image {
+    background: $backgroundItemColor;
+    width: 30vw;
+    padding: 4vw;
+    border: 2vw $playerInfoFontColor solid;
+    border-radius: 10px;
+  }
+
+  .body {
+    display: flex;
+    margin: $mediumTextTopMargin $windowLeftRightPadding 0 $windowLeftRightPadding;
+  }
+
+  .body__left {
+    text-align: left;
+    width: 60vw;
+    font-size: $verySmallTextSize;
+  }
+
+  .item_property {
+    text-align: left;
+    margin: $mediumTextTopMargin $windowLeftRightPadding 0 $windowLeftRightPadding;
+  }
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 2vw;
+  width: 100vw;
+}

@@ -1,0 +1,30 @@
+@import '../InventoryItem';
+
+%inventoryItemCheckbox {
+  display: block;
+  position: absolute;
+  bottom: -$borderSize / 2;
+  height: $squareSize;
+}
+
+.inventory_item_checkbox__counting {
+
+  @extend %inventoryItemCheckbox;
+
+  right: -$borderSize / 2;
+  width: $squareSize * 2.5;
+
+  border-top: $borderSize $playerInfoFontColor solid;
+  border-left: $borderSize $playerInfoFontColor solid;
+}
+
+.inventory_item_checkbox__equippable {
+
+  @extend %inventoryItemCheckbox;
+
+  left: -$borderSize / 2;
+  width: $squareSize;
+
+  border-top: $borderSize $playerInfoFontColor solid;
+  border-right: $borderSize $playerInfoFontColor solid;
+}

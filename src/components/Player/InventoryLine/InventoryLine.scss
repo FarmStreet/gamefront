@@ -1,0 +1,36 @@
+@import '../../../assets/styles/styles.scss';
+
+$tableSize: 100vw;
+
+%inventoryLine {
+  width: $tableSize;
+  background-size: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+@mixin invertoryHeight($imageHeight, $imageWigth) {
+  height: ($tableSize / $imageHeight * $imageWigth);
+}
+@mixin invertoryPadding($top, $left) {
+  padding-top: $top;
+  padding-left: $left;
+}
+
+.inventory_header {
+  @extend %inventoryLine;
+  @include invertoryHeight(35vw, 6vw);
+  @include invertoryPadding(3vw, 1vw);
+}
+
+.inventory_body {
+  @extend %inventoryLine;
+  @include invertoryHeight(25vw, 4vw);
+  @include invertoryPadding(1.5vw, 1vw);
+}
+
+.inventory_footer {
+  @extend %inventoryLine;
+  @include invertoryHeight(175vw, 33vw);
+  @include invertoryPadding(1.5vw, 1vw);
+}

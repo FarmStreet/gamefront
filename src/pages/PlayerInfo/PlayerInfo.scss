@@ -1,0 +1,33 @@
+@import '../../assets/styles/styles.scss';
+
+.playerInfo {
+
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: $playerInfoFontColor;
+
+  .mainPage {
+    width: 100vw;
+    height: calc(100vh - ($windowLeftRightPadding * 2));
+    max-width: 1000px;
+    background: $playerInfoWindowColor;
+    overflow-y: scroll;
+    padding: $windowLeftRightPadding 0 $windowLeftRightPadding 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .name {
+    font-size: $bigTextSize;
+    display: flex;
+    word-break: break-word;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

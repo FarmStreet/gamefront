@@ -1,0 +1,101 @@
+@import '../../../assets/styles/styles.scss';
+
+
+%inventory_item__props {
+  box-sizing: border-box;
+  position: relative;
+}
+@mixin inventoryItemSizes($size, $padding, $margin, $borderSize) {
+
+  width: $size;
+  height: $size;
+  padding: $padding;
+  margin-left: $margin;
+  border: $borderSize $playerInfoFontColor solid;
+}
+
+.inventory_item {
+  @extend %inventory_item__props;
+}
+
+.inventory_item__list {
+
+  @include inventoryItemSizes($itemSize, $itemPadding, 2vw, $borderSize);
+}
+
+.inventory_item__profile {
+
+  @include inventoryItemSizes($itemSizeBig, $itemPaddingBig, $itemMarginBig, $borderSizeBig);
+  background: $backgroundItemColor;
+}
+
+.inventory_item img {
+  width: 100%;
+}
+
+/*
+
+.inventory_item__hover:hover .inventory_item_checkbox__counting {
+  border-top: $borderSize $playerInfoFontColorActive solid;
+  border-left: $borderSize $playerInfoFontColorActive solid;
+}
+
+.inventory_item__hover:hover .inventory_item_checkbox__equippable {
+  border-top: $borderSize $playerInfoFontColorActive solid;
+  border-right: $borderSize $playerInfoFontColorActive solid;
+}
+
+
+
+.inventory_item_checkbox {
+  display: none;
+  background: black;
+}
+
+.inventory_item_checkbox__counting {
+  display: block;
+  position: absolute;
+  right: -$borderSize / 2;
+  bottom: -$borderSize / 2;
+  width: $squareSize * 2.5;
+  height: $squareSize;
+  border-top: $borderSize $playerInfoFontColor solid;
+  border-left: $borderSize $playerInfoFontColor solid;
+}
+
+.inventory_item_checkbox__counting_text {
+
+  position: absolute;
+  top: -$squareSize / 4;
+  left: 0;
+  font-size: $squareSize;
+  text-align: center;
+  width: 100%;
+}
+
+.inventory_item_checkbox__equippable {
+  display: block;
+  position: absolute;
+  left: -$borderSize / 2;
+  bottom: -$borderSize / 2;
+  width: $squareSize;
+  height: $squareSize;
+  border-top: $borderSize $playerInfoFontColor solid;
+  border-right: $borderSize $playerInfoFontColor solid;
+}
+
+.inventory_item__counting {
+  border-radius: 10px 10px 0 10px;
+}
+
+.inventory_item__equippable {
+  border-radius: 10px 10px 10px 0;
+}
+
+.galca {
+  width: ($squareSize - 1vw) !important;
+  height: ($squareSize - 1vw);
+  border-radius: unset;
+  position: absolute;
+  left: $borderSize / 2;
+}*/
